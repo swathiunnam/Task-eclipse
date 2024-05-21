@@ -1,16 +1,22 @@
-package seleniumPrograms;
+package task17;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SnapDeal {
+public class GuviDemo {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "c:\\drivers\\chromedriver.exe");
 		//launch browser
 		WebDriver driver=new ChromeDriver();
-		//navigate to snapdeal
-				driver.navigate().to("https://www.snapdeal.com/");
+		//maximise browser
+		driver.manage().window().maximize();
+		//open guvi
+		driver.get("https://www.guvi.in/register");
+		//id locator
+		driver.findElement(By.id("//input[@id='name']")).sendKeys("Test");
+
 
 	}
 

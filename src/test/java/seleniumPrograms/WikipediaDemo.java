@@ -1,11 +1,11 @@
 package seleniumPrograms;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Selenium3 {
+public class WikipediaDemo {
 
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "c:\\drivers\\chromedriver.exe");
@@ -16,9 +16,15 @@ public class Selenium3 {
 		//maximize the browser
 		driver.manage().window().maximize();
 		//search for query
-	driver.findElement(By.id("searchInput")).sendKeys("Artificial Intelligence");
-	Thread.sleep(2000);
-	driver.findElement(By.id("searchInput")).click();
+	    driver.findElement(By.id("searchInput")).sendKeys("Artificial Intelligence",Keys.ENTER);
+	    Thread.sleep(2000);
+	    //click on history
+	     driver.findElement(By.linkText("History")).click();
+	     //print the title
+	   System.out.println( driver.getTitle());
+	
+	
+	
 	
 		
 		

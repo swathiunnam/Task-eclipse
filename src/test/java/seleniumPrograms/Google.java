@@ -11,12 +11,15 @@ public class Google {
 		System.setProperty("webdriver.chrome.driver", "c:\\drivers\\chromedriver.exe");
 		//launch browser
 		WebDriver driver=new ChromeDriver();
+		//maximize the browser
+		driver.manage().window().maximize();   
 		//navigate to google
 		driver.navigate().to("https://www.google.com/");
-		//maximize the browser
-		driver.manage().window().maximize();
-	    Thread.sleep(5000);
-		driver.findElement(By.id("input")).sendKeys("Selenium Browser Drivers");
+		System.out.println(driver.getCurrentUrl());
+		driver.navigate().refresh();
+		driver.close();
+	
+		
 		
 		
 	}

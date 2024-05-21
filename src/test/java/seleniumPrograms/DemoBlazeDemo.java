@@ -3,7 +3,7 @@ package seleniumPrograms;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SeleniumDemo {
+public class DemoBlazeDemo {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "c:\\drivers\\chromedriver.exe");
